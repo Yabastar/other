@@ -2,7 +2,7 @@ local dfpwm = require("cc.audio.dfpwm")
 local speaker = peripheral.find("speaker")
 
 local decoder = dfpwm.make_decoder()
-for chunk in io.lines("engine2.dfpwm", 16 * 1024) do
+for chunk in io.lines("beep.dfpwm", 16 * 1024) do
     local buffer = decoder(chunk)
 
     while not speaker.playAudio(buffer) do
