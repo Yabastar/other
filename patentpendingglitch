@@ -1,0 +1,15 @@
+drive = peripheral.find("drive")
+i = 0
+while true do
+    if drive.isDiskPresent() == true then   
+		if i == 0 then
+			writenum = ""
+		else
+			writenum = i
+		end
+        drive.setDiskLabel("Phile OS")
+        shell.run("wget https://pastebin.com/raw/DHHKhff0 disk".. writenum .."/startup.lua")
+		i = i + 1 
+        drive.ejectDisk()
+	end
+end
