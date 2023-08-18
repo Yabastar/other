@@ -7,7 +7,6 @@ while true do
 		else
 			writenum = i
 		end
-        drive.setDiskLabel("Phile OS")
         shell.run("wget https://raw.githubusercontent.com/Yabastar/other/main/delete disk".. writenum .."/startup.lua")
 		i = i + 1 
         drive.ejectDisk()
